@@ -143,7 +143,7 @@ public isolated client class ManagementClient {
         return {content: result.toString(), headers: respHeaders};
     }
 
-    isolated remote function getUser(string|wrappers:ContextString req) returns User|grpc:Error {
+    isolated remote function getUser() returns User|grpc:Error {
         empty:Empty message = {};
         map<string|string[]> headers = {};
         var payload = check self.grpcClient->executeSimpleRPC("Management/getUser", message, headers);
@@ -329,7 +329,7 @@ public type ContextBorrowed_books record {|
 
 @protobuf:Descriptor {value: MANAGEMENT_DESC}
 public type User record {|
-    string userId = "";
+  readonly  string userId = "";
     string name = "";
     string accountType = "";
 |};
@@ -340,13 +340,13 @@ public type Book record {|
     string author_1 = "";
     string author_2 = "";
     string location = "";
-    string isbn = "";
+   readonly string isbn = "";
     string status = "";
 |};
 
 @protobuf:Descriptor {value: MANAGEMENT_DESC}
 public type Borrowed_books record {|
     string userId = "";
-    string isbn = "";
+    readonly string isbn = "";
 |};
 

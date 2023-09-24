@@ -5,7 +5,7 @@
 
 [ballerina]
 dependencies-toml-version = "2"
-distribution-version = "2201.7.1"
+distribution-version = "2201.7.2"
 
 [[package]]
 org = "ballerina"
@@ -78,9 +78,6 @@ version = "1.5.0"
 dependencies = [
 	{org = "ballerina", name = "jballerina.java"},
 	{org = "ballerina", name = "lang.value"}
-]
-modules = [
-	{org = "ballerina", packageName = "io", moduleName = "io"}
 ]
 
 [[package]]
@@ -256,16 +253,15 @@ modules = [
 ]
 
 [[package]]
-org = "ubuntu"
-name = "mgmnt_client"
+org = "lord_payne"
+name = "question2"
 version = "0.1.0"
 dependencies = [
 	{org = "ballerina", name = "grpc"},
-	{org = "ballerina", name = "io"},
 	{org = "ballerina", name = "protobuf"},
 	{org = "ballerinai", name = "observe"}
 ]
 modules = [
-	{org = "ubuntu", packageName = "mgmnt_client", moduleName = "mgmnt_client"}
+	{org = "lord_payne", packageName = "question2", moduleName = "question2"}
 ]
 
